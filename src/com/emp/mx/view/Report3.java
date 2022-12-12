@@ -1,31 +1,24 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.emp.mx.view;
 
-
 import com.emp.mx.db.Reporte3View;
 import java.awt.BorderLayout;
-import java.io.IOException;
 
 /**
  *
  * @author Moise
  */
-public class Report3 extends javax.swing.JPanel {
-
+public class Report3 extends javax.swing.JFrame {
+    String id;
     /**
      * Creates new form Report3
      */
-    
-
-    /**
-     * Creates new form Ventana
-     * @param id
-     */
-    public Report3(String id) {
+   public Report3(String id) {
         // id de la venta a mostrar
+        this.id=id;
         initComponents();
         
         System.out.println(id);
@@ -35,10 +28,10 @@ public class Report3 extends javax.swing.JPanel {
         Reporte3View reporte = new Reporte3View();    
         pnlReporte.add(reporte.getReport(id));
         // localización de la ventana   
-      
     }
     
     
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,21 +43,21 @@ public class Report3 extends javax.swing.JPanel {
 
         pnlReporte = new javax.swing.JPanel();
 
-        pnlReporte.setBackground(new java.awt.Color(255, 255, 255));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout pnlReporteLayout = new javax.swing.GroupLayout(pnlReporte);
         pnlReporte.setLayout(pnlReporteLayout);
         pnlReporteLayout.setHorizontalGroup(
             pnlReporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 813, Short.MAX_VALUE)
+            .addGap(0, 795, Short.MAX_VALUE)
         );
         pnlReporteLayout.setVerticalGroup(
             pnlReporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 406, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -79,8 +72,14 @@ public class Report3 extends javax.swing.JPanel {
                 .addComponent(pnlReporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * @param args the command line arguments
+     */
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel pnlReporte;
