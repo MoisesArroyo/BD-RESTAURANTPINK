@@ -31,14 +31,14 @@ public class Reporte3View extends Conexion{
         
         try{
            // Lee el archivo de reporte
-           JasperDesign desing = JRXmlLoader.load(getClass().getResource("/reportes/REPORT3.jrxml").getPath());
+           JasperDesign desing = JRXmlLoader.load(getClass().getResource("/Reportes/REPORT3.jrxml").getPath());
            // Compila el reporte
            JasperReport jr = JasperCompileManager.compileReport(desing);
            // Paramatros del reporte, manda el ID de la renta para generar el reporte
            Map<String, Object> parametros = new HashMap<>();
            parametros.put("NOMBRE",id);
            // Ruta de las imagenes que usa el reporte
-           String reportsDirPath = getClass().getResource("/reportes").getPath();
+           String reportsDirPath = getClass().getResource("/Reportes").getPath();
            File reportsDir = new File(reportsDirPath);
            // Configuracíón del parametro
            parametros.put(JRParameter.REPORT_FILE_RESOLVER, new SimpleFileResolver(reportsDir));

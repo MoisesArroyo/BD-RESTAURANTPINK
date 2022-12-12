@@ -35,9 +35,9 @@ public class Reporte3PDF extends Conexion{
            // Paramatros del reporte, aun que no se le mandan parametros, es necesario para las imagenes 
            // que usa el reporte
            Map<String, Object> parametros = new HashMap<>();
-           parametros.put("NAME_PRODUCTO",id);
+           parametros.put("NOMBRE",id);
            // Ruta de las imagenes que usa el reporte   
-           String reportsDirPath = getClass().getResource("/reportes").getPath(); 
+           String reportsDirPath = getClass().getResource("/Reportes").getPath(); 
            File reportsDir = new File(reportsDirPath); 
            // Configuracíón del parametro
            parametros.put(JRParameter.REPORT_FILE_RESOLVER, new SimpleFileResolver(reportsDir));

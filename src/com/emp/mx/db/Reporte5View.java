@@ -31,11 +31,11 @@ public class Reporte5View extends Conexion{
         try{
            // Lee el archivo de reporte
            System.out.println("here82");
-           //JasperDesign desing = JRXmlLoader.load(getClass().getResource("/Reportes/REPORT5.jrxml").getPath());
+           JasperDesign desing = JRXmlLoader.load(getClass().getResource("/Reportes/REPORT5.jrxml").getPath());
            // Compila el reporte
-           JasperReport jr =JasperCompileManager.compileReport("D:/Usuarios/Mgenius30/Documentos/NetBeansProjects/Empleado/src/Reportes/REPORT5.jrxml");
-           System.out.println("here83");
-           //JasperReport jr = JasperCompileManager.compileReport(desing);
+           //JasperReport jr =JasperCompileManager.compileReport("D:/Usuarios/Mgenius30/Documentos/NetBeansProjects/Empleado/src/Reportes/REPORT5.jrxml");
+          
+           JasperReport jr = JasperCompileManager.compileReport(desing);
            
            // Paramatros del reporte, manda el ID de la renta para generar el reporte
            Map<String, Object> parametros = new HashMap<>();

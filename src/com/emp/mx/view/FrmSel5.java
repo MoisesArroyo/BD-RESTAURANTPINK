@@ -75,6 +75,11 @@ public class FrmSel5 extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Generar Reporte");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, 130, 40));
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
@@ -141,6 +146,18 @@ public class FrmSel5 extends javax.swing.JFrame {
     private void tbSel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbSel5MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_tbSel5MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        if(txtDato.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Llena los campos");
+        }else
+        {   String mensaje = txtDato.getText();
+            Report5 reporte = new Report5(mensaje);
+            reporte.setVisible(true);
+           
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

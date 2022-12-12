@@ -4,37 +4,32 @@
  */
 package com.emp.mx.view;
 
-import com.emp.mx.db.Reporte1View;
+
+import com.emp.mx.db.Reporte5View;
 import java.awt.BorderLayout;
-import java.awt.Toolkit;
-import java.awt.Window;
-import java.awt.Frame;
-import java.util.Locale;
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author Moise
  */
-public class Report1 extends javax.swing.JFrame {
-    int id;
+public class Report5 extends javax.swing.JFrame {
+    String id;
     /**
-     * Creates new form Report1
+     * Creates new form Report5
      */
-    public Report1() {
+    public Report5(String id) {
         initComponents();
+        this.id=id;
+        initComponents();
+        
+        System.out.println(id);
         // configuración para cargar el reporte
-        jPanel.setLayout(new BorderLayout());
+        pnlReporte.setLayout(new BorderLayout());
         // ejecuta el reporte y lo muestra en la ventana
-        Reporte1View reportePeliculas = new Reporte1View();    
-        jPanel.add(reportePeliculas.getReport());
-        // localización de la ventana
-        setLocationRelativeTo(null);	
-        // titulo de la ventana
-        setTitle("Peliculas");
+        Reporte5View reporte = new Reporte5View();    
+        pnlReporte.add(reporte.getReport(id));
     }
-    
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,17 +39,17 @@ public class Report1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel = new javax.swing.JPanel();
+        pnlReporte = new javax.swing.JPanel();
 
-        javax.swing.GroupLayout jPanelLayout = new javax.swing.GroupLayout(jPanel);
-        jPanel.setLayout(jPanelLayout);
-        jPanelLayout.setHorizontalGroup(
-            jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 743, Short.MAX_VALUE)
+        javax.swing.GroupLayout pnlReporteLayout = new javax.swing.GroupLayout(pnlReporte);
+        pnlReporte.setLayout(pnlReporteLayout);
+        pnlReporteLayout.setHorizontalGroup(
+            pnlReporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 927, Short.MAX_VALUE)
         );
-        jPanelLayout.setVerticalGroup(
-            jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 386, Short.MAX_VALUE)
+        pnlReporteLayout.setVerticalGroup(
+            pnlReporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 475, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -63,19 +58,20 @@ public class Report1 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnlReporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnlReporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel;
+    private javax.swing.JPanel pnlReporte;
     // End of variables declaration//GEN-END:variables
 }

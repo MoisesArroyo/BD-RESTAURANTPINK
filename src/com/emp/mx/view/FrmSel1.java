@@ -106,6 +106,8 @@ public class FrmSel1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         Reporte1PDF reporte = new Reporte1PDF();
         reporte.genReport();
+       // Report1 reporte1 = new Report1();
+       // reporte1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
