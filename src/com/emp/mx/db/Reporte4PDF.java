@@ -17,14 +17,12 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.SimpleFileResolver;
-import java.sql.Connection;
-import net.sf.jasperreports.repo.FileRepositoryService;
 
 /**
  *
  * @author Moise
  */
-public class Reporte1PDF extends Conexion{
+public class Reporte4PDF extends Conexion{
     public void genReport(){
         
         // Conecta a la base de datos
@@ -33,7 +31,7 @@ public class Reporte1PDF extends Conexion{
        try{
            
            // Lee el archivo de reporte y compila el reporte
-           JasperReport report = JasperCompileManager.compileReport(getClass().getResource("/Reportes/REPORTE_PEDIDO.jrxml").getPath());
+           JasperReport report = JasperCompileManager.compileReport(getClass().getResource("/Reportes/REPORT4.jrxml").getPath());
            // Paramatros del reporte, aun que no se le mandan parametros, es necesario para las imagenes 
            // que usa el reporte
            Map<String, Object> parametros = new HashMap<>();

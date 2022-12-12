@@ -17,14 +17,12 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.SimpleFileResolver;
-import java.sql.Connection;
-import net.sf.jasperreports.repo.FileRepositoryService;
 
 /**
  *
  * @author Moise
  */
-public class Reporte1PDF extends Conexion{
+public class Reporte2PDF extends Conexion{
     public void genReport(){
         
         // Conecta a la base de datos
@@ -33,7 +31,7 @@ public class Reporte1PDF extends Conexion{
        try{
            
            // Lee el archivo de reporte y compila el reporte
-           JasperReport report = JasperCompileManager.compileReport(getClass().getResource("/Reportes/REPORTE_PEDIDO.jrxml").getPath());
+           JasperReport report = JasperCompileManager.compileReport(getClass().getResource("/Reportes/REPORT2.jrxml").getPath());
            // Paramatros del reporte, aun que no se le mandan parametros, es necesario para las imagenes 
            // que usa el reporte
            Map<String, Object> parametros = new HashMap<>();
@@ -42,10 +40,8 @@ public class Reporte1PDF extends Conexion{
            File reportsDir = new File(reportsDirPath); 
            // Configuracíón del parametro
            parametros.put(JRParameter.REPORT_FILE_RESOLVER, new SimpleFileResolver(reportsDir));
-           // Genera el reporte
-            System.out.println("Entre aquí8");
+           // Genera el reporte       
            JasperPrint print = JasperFillManager.fillReport(report,parametros,c.getConnection());
-           System.out.println("Entre aquí3");
            // Exporta el reporte con el nombre Archivo.PDF
            JasperExportManager.exportReportToPdfFile(print, "Archivo.PDF");
            // Crea un file con el reporte para poder abrirlo

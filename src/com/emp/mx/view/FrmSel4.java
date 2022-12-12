@@ -5,6 +5,8 @@
 package com.emp.mx.view;
 
 import com.emp.mx.bo.Select4BO;
+import com.emp.mx.db.Reporte1PDF;
+import com.emp.mx.db.Reporte4PDF;
 
 /**
  *
@@ -72,6 +74,11 @@ public class FrmSel4 extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Generar Reporte");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 130, 40));
 
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -96,6 +103,12 @@ public class FrmSel4 extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_tbSel4MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Reporte4PDF reporte = new Reporte4PDF();
+        reporte.genReport();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

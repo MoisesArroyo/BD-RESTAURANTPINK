@@ -5,7 +5,6 @@
 package com.emp.mx.db;
 
 import java.io.File;
-import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
 import net.sf.jasperreports.engine.JRException;
@@ -23,13 +22,13 @@ import net.sf.jasperreports.swing.JRViewer;
  *
  * @author Moise
  */
-public class Reporte1View extends Conexion {
+public class Reporte2View extends Conexion{
     public JRViewer getReport(){
         // Conecta a la base de datos
        Conexion c = new Conexion();
        try{
            // Lee el archivo de reporte
-           JasperDesign desing = JRXmlLoader.load(getClass().getResource("/Reportes/REPORTE_PEDIDO.jrxml").getPath());
+           JasperDesign desing = JRXmlLoader.load(getClass().getResource("/Reportes/REPORT2.jrxml").getPath());
            // Compila el reporte
            JasperReport jr = JasperCompileManager.compileReport(desing);
            // Paramatros del reporte, aun que no se le mandan parametros, es necesario para las imagenes 

@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class Conexion {
+    public Connection con = null;
     public String sentenciaSQL;
     private static Connection conn = null;
     private static String login = "USR_EMP";

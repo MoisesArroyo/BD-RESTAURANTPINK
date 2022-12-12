@@ -16,9 +16,10 @@ import net.sf.jasperreports.swing.JRViewerToolbar;
 import net.sf.jasperreports.view.JRSaveContributor;
 import net.sf.jasperreports.view.save.JRPdfSaveContributor;
 
-public class JPReport extends JRViewer{
+
+public class MyJRViewer extends JRViewer{
     //define the constructor that you use
-    public JPReport(JasperPrint jasperPrint) {
+    public MyJRViewer(JasperPrint jasperPrint) {
         super(jasperPrint);
     }
     @Override
